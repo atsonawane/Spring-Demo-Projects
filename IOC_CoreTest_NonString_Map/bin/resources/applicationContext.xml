@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+	<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+	
+	<beans>
+		<bean id="q1" class="beans.Question">
+			<constructor-arg value="1" type="int"></constructor-arg>
+			<constructor-arg value="What is Java?"></constructor-arg>
+			<constructor-arg>
+				<map>
+					<entry key-ref="ans1" value-ref="user1"></entry>
+				</map>
+			</constructor-arg>
+		</bean>
+		<bean id="q2" class="beans.Question">
+			<constructor-arg value="2" type="int"></constructor-arg>
+			<constructor-arg value="What is C++?"></constructor-arg>
+			<constructor-arg>
+				<map>
+					<entry key-ref="ans2" value-ref="user2"></entry>
+				</map>
+			</constructor-arg>
+		</bean>
+		<bean id="user1" class="beans.User">
+			<constructor-arg value="1" type="int"></constructor-arg>
+			<constructor-arg value="Avinash"></constructor-arg>
+			<constructor-arg value="avinash@gmail.com"></constructor-arg>
+		</bean>
+		<bean id="user2" class="beans.User">
+			<constructor-arg value="1" type="int"></constructor-arg>
+			<constructor-arg value="Avinash"></constructor-arg>
+			<constructor-arg value="avinash@gmail.com"></constructor-arg>
+		</bean>
+
+		<bean id="ans1" class="beans.Answer">
+			<constructor-arg value="1"></constructor-arg>
+			<constructor-arg value="Java is a programming language."></constructor-arg>
+			<constructor-arg value="30/03/2019"></constructor-arg>
+		</bean>
+		<bean id="ans2" class="beans.Answer">
+			<constructor-arg value="1"></constructor-arg>
+			<constructor-arg value="C++ is a programming language."></constructor-arg>
+			<constructor-arg value="30/03/2019"></constructor-arg>
+		</bean>
+
+	</beans>
